@@ -43,7 +43,7 @@
 	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="doctors.html" class="nav-link">Doctors</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta"><a href="contact.html" class="nav-link" data-toggle="modal" data-target="#modalRequest"><span>Make an Appointment</span></a></li>
 	        </ul>
 	      </div>
@@ -78,6 +78,9 @@
         </div>
       </div>
     </section>
+
+{% block body %}
+
 
     <section class="ftco-intro">
     	<div class="container">
@@ -744,6 +747,8 @@
     </section>
 		
 		<div id="map"></div>
+{% endblock body %}
+
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
